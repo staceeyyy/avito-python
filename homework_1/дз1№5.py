@@ -1,4 +1,4 @@
-if __name__ == '__main__':
+if __name__ == "__main__":
     reviews = [
         {"id": 1, "product": "Чехол", "stars": 5},
         {"id": 1, "product": "Чехол", "stars": 3},
@@ -11,19 +11,20 @@ if __name__ == '__main__':
         {"id": 4, "product": "Колонка", "stars": 4},
         {"id": 5, "product": "Кабель", "stars": 1},
     ]
+
     for review in reviews:
-        review['product'] = review['product'].lower()
+        review["product"] = review["product"].lower()
 
     stars_sum = {}
     reviews_cnt = {}
-    for review in reviews: 
-        product = review['product']
+    for review in reviews:
+        product = review["product"]
 
-        if product not in stars_sum: 
+        if product not in stars_sum:
             stars_sum[product] = 0
             reviews_cnt[product] = 0
 
-        stars_sum[product] += review['stars']
+        stars_sum[product] += review["stars"]
         reviews_cnt[product] += 1
 
     average_stars = {}
@@ -40,7 +41,10 @@ if __name__ == '__main__':
             products_two_reviews[product] = average
 
     worst_product = min(products_two_reviews, key=products_two_reviews.get)
-    print(f"2. Худший товар по средней оценке среди тех, у кого хотя бы два отзыва: {worst_product}")
+    print(
+        "2. Худший товар по средней оценке среди тех, "
+        f"у кого хотя бы два отзыва: {worst_product}"
+    )
 
     bad_reviews_count = 0
     for review in reviews:
@@ -48,4 +52,7 @@ if __name__ == '__main__':
             bad_reviews_count += 1
 
     print(f"3. Количество отзывов на 1 или 2 звезды: {bad_reviews_count}")
-    print(f"4. Доля отзывов на 1 или 2 звезды: {bad_reviews_count / len(reviews)}")
+    print(
+        "4. Доля отзывов на 1 или 2 звезды: "
+        f"{bad_reviews_count / len(reviews)}"
+    )

@@ -23,7 +23,7 @@ if __name__ == "__main__":
             who_returned.add(order["buyer"])
     print(
         "2. Покупатели, которые хотя бы раз вернули заказ: "
-        f"{who_returned}"
+        f"{sorted(who_returned)}"
     )
 
     delivered_count = 0

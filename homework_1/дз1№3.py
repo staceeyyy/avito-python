@@ -17,10 +17,10 @@ if __name__ == "__main__":
         f"{total_returned_price} рублей"
     )
 
-    who_returned = []
+    who_returned = set()
     for order in orders:
         if order["status"] == "returned":
-            who_returned.append(order["buyer"])
+            who_returned.add(order["buyer"])
     print(
         "2. Покупатели, которые хотя бы раз вернули заказ: "
         f"{who_returned}"

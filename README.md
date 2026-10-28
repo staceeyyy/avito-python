@@ -21,7 +21,7 @@ cd avito-python
 
 ### Запуск
 
-**ДЗ №1**
+*ДЗ №1:*
 
 ```bash
 git switch my_avito_python
@@ -30,7 +30,7 @@ python "homework_1/дз1№1.py"
 
 Остальные задачи запускаются аналогично (`дз1№2.py` — `дз1№5.py`).
 
-**ДЗ №2**
+*ДЗ №2:*
 
 ```bash
 git switch homework2-corp-reports

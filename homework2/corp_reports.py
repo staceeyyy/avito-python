@@ -42,9 +42,11 @@ def main(report_number: int): #создаём главную функцию, п�
         report3(data)
     else:
         print("Такого номера отчета не существует")
-print("Отчет 1:")        
-main(1)
-print("Отчет 2:")
-main(2)
-print("Отчет 3:")
+
+if __name__ == '__main__':
+    print("Отчет 1:")        
+    main(1)
+    print("Отчет 2:")
+    main(2)
+    print("Отчет 3:")
 main(3)
